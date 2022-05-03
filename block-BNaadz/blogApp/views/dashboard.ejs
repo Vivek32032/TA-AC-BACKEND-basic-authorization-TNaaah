@@ -1,0 +1,26 @@
+<%- include('../partials/header') -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <main class="m-20 min-screen-h flex justify-center items-center" >
+        <section>
+            <h1 class="text-center text-2xl text-blue-600" >Welcome <%= user.firstName + " " + user.lastName %></h1>
+        </section>
+        <section>
+
+        </section>
+    </main>
+    <section class="flex justify-center mt-5">
+        <a href="/articles" class="px-3 py-2 text-pink-300 font-bold rounded bg-green-600 hover-bg-blue-900 mr-5" >
+            View All Articles
+        </a>
+        <a href="/users/logout" class="px-3 py-2 text-white font-bold rounded bg-green-600 hover-bg-blue-900" >Logout</a>
+    </section>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Add article</title>
+</head>
+<body>
+<%- include('../partials/header') -%>
+    <main>
+        <div class="m-5 px-8 py-4 border-2">
+            <form action="/articles/new" method="POST" class="flex flex-col items-center">
+                <input type="text" name="title" placeholder="Add Tittle" class="border-2 p-2 w-full mb-5">
+                <textarea name="description" placeholder="Add Content" class="border-2 p-2 w-full mb-5" rows="10"></textarea>
+                <input type="text" name="tags" placeholder="Add Tags" class="border-2 p-2 w-full mb-5">
+                <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Add Article
+                </button>
+            </form>
+            </div>
+    </main>
+</body>
+</html>
+<%- include('../partials/footer') -%>
