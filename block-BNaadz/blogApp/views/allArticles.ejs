@@ -1,0 +1,36 @@
+<%- include('../partials/header') -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Of Articles</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body class="">
+    <section class="p-10 min-h-screen">
+        <% articles.forEach(article => { %>
+            <div class="m-5 px-4 py-4 border-2"> 
+                <h3 class="text-2xl pb-2 text-blue-900"><%= article.title %></h3>
+
+                <p class="pb-2 ">
+                    <%= article.description.slice(0, 250)+"...." %>
+                </p>
+                <a href="/articles/<%= article.slug %>">
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded">Read</button>
+                </a> 
+                <a href="/articles/<%= article.slug %>/edit">
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded">Edit</button>
+                </a> 
+                <a href="/articles/<%= article.slug %>/delete">
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Delete</button>
+                </a> 
+            </div>
+   
+        <% }) %>           
+    </section>
+
+</body>
+</html>
+<%- include('../partials/footer') -%>

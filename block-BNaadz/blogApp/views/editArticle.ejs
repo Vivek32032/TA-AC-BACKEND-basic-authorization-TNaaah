@@ -1,0 +1,36 @@
+<!-- <%- include('../partials/header') -%> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Article</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body class="m-10">
+        <header class="bg-blue-900 w-100 flex justify-between items-center p-5 rounded mb-10">       
+            <a href="/articles" class="text-3xl pl-5">
+             <h2 class="text-white">Blog</h2>
+            </a>
+            <h1 class="text-4xl text-white font-bold">Edit Article</h1>
+            <a href="/articles">
+             <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Go to Home</button>
+         </a>
+         </header>
+        <!-- <h1 class="text-center text-3xl text-blue-600"> New Article</h1> -->
+        <div class="m-5 px-8 py-4 border-2">
+            <form action="/articles/<%= article.id %>" method="POST" class="flex flex-col items-center">
+                <input type="text" name="title" placeholder="Add Tittle" class="border-2 p-2 w-full mb-5" value="<%= article.title %>">
+                <textarea name="description" placeholder="Add Content" class="border-2 p-2 w-full mb-5" rows="10">
+                    <%= article.description %>
+                </textarea>
+                <input type="text" name="tags" placeholder="Add Tags" class="border-2 p-2 w-full mb-5" value="<%= article.tags %>">
+                <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Update Article
+                </button>
+            </form>
+    
+        </div>
+</body>
+</html>
