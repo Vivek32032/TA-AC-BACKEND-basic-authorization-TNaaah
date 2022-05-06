@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast App</title>
+    <script src="https://kit.fontawesome.com/7c7efbb78c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body class="m-10">
+    <header class="bg-blue-900 w-100 flex justify-between items-center p-5 rounded mb-10">
+       
+       <a href="/home" class="text-3xl pl-5">
+        <h2 class="text-white">AltPodcast</h2>
+       </a>
+       <% if(user) { %>
+        <nav class="flex items-center">
+            <a href="" class="text-lg font-bold text-gray-200 mr-5"><%= user.fullName %></a>
+            <a href="/users/logout" class="px-3 py-2 text-white font-bold rounded bg-green-600 hover:bg-blue-700 ml-4" >
+                Logout
+            </a>
+            </nav>
+       <% } else { %>
+        <nav class="flex items-center">
+            <a href="/users/login">
+                <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">Login</button>
+            </a>
+            <a href="/users/register" class="px-3 py-2 text-white font-bold rounded bg-green-600 hover:bg-blue-700 ml-4" >
+                Register
+            </a>
+        </nav>
+        <% } %>
+    </header>
+</body>
+</html>
