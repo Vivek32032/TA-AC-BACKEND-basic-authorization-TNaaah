@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+</head>
+<body class="m-10">
+    <header class="bg-blue-900 w-100 flex justify-between items-center p-5 rounded mb-10" >
+        <div class="flex container jsb">
+          <img class="logo" src="/images/logo.jpg" alt="logo" />
+          <div class="flex">
+            <a href="/client/product/list" class="btn btn-ter">Shop now</a>
+            <a href="/client/product/cart" class="btn btn-ter"> cart</a>
+            <a href="/users/logout" class="btn btn-ter">Logout</a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="sec-padding">
+          <div class="container hero-sec">
+            <h2 class="text-center">
+              Welcome <span class="color-sec">User</span>
+            </h2>
+            <span class="color-sec text-center"><%= error %> </span>
+          </div>
+        </section>
+        <section class="sec-padding flex center">
+          <div class="container flex justify-center">
+            <a href="/client/product/list" class="btn btn-pri">Start Shopping</a>
+          </div>
+        </section>
+      </main>
+
+</body>
+</html>
